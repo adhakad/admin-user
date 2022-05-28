@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Terms Conditions</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body style="background-color: #9652e2;">
+    <div class="container-fluid container-padding">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div style="margin-top:8vh;" >
+            <div class="panel panel-info" style="border: 2px solid transparent!important; border-radius: 15px;"><div class="col-xs-12 text-center padding"><h2>User Login Terms & Conditions</h2></div>
+              <div class="panel-body" style="padding: 10%;">
+              
+                <a href="/api/v1/admin/addTermsConditions" class="btn btn-default">Add T&C</a>
+              <br><br>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Terms & Conditions</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% if(!data==''){%>
+                    <tr>
+                      <td><%= data.title %></td>
+                      <td><%= data.text %></td>
+                      <td><a href="/api/v1/admin/termsConditions/<%= data._id %>" style="color:rgb(238, 16, 153);">Delete</a></td>
+                    </tr>
+                  
+                   <% } %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

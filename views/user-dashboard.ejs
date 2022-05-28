@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body style="background-color: #9652e2;">
+    <div class="container-fluid container-padding">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <div style="margin-top:8vh;" >
+            <div class="panel panel-info" style="border: 2px solid transparent!important; border-radius: 15px;"><div class="col-xs-12 text-center padding"><h2>All Users List</h2></div>
+              <div class="panel-body" style="padding: 10%;">
+              <br><br>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% if(data.length > 0){data.forEach(function(row){%>
+                  <tr>
+                    <td><%= row.name %></td>
+                    <td><%= row.email %></td>
+                  </tr>
+                  <%  })} %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+  </body>
+</html>
